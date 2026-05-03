@@ -1,0 +1,48 @@
+/* slide 7 — what's next */
+
+#slide-7 .cols {
+  position: absolute;
+  left: 80px;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+}
+#slide-7 .col {
+  padding: 32px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: 240px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+#slide-7.present .col { opacity: 1; transform: translateY(0); }
+#slide-7.present .col:nth-child(1) { transition-delay: 0.10s; }
+#slide-7.present .col:nth-child(2) { transition-delay: 0.30s; }
+#slide-7.present .col:nth-child(3) { transition-delay: 0.50s; }
+
+#slide-7 .col-label {
+  font-family: "IBM Plex Mono", "SF Mono", Menlo, monospace;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  color: var(--primary);
+  opacity: 0.85;
+  margin-bottom: 18px;
+}
+#slide-7 .col-line {
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--text);
+  opacity: 0.85;
+  margin: 0 0 14px;
+}
+#slide-7 .col-line.callback {
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--primary);
+  opacity: 1;
+}

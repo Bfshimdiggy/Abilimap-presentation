@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AbiliMap — STEAM Scholars Showcase</title>
+
+  <link rel="stylesheet" href="lib/reveal/reset.css">
+  <link rel="stylesheet" href="lib/reveal/reveal.css">
+  <link rel="stylesheet" href="lib/reveal/theme/black.css" id="theme">
+
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/slide-01-title.css">
+  <link rel="stylesheet" href="css/slide-02-origin.css">
+  <link rel="stylesheet" href="css/slide-03-first-idea.css">
+  <link rel="stylesheet" href="css/slide-04-the-wall.css">
+  <link rel="stylesheet" href="css/slide-05-plan-b.css">
+  <link rel="stylesheet" href="css/slide-06-demo.css">
+  <link rel="stylesheet" href="css/slide-07-whats-next.css">
+  <link rel="stylesheet" href="css/slide-08-close.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section id="slide-1" data-slide="title">
+        <div class="slide-canvas">
+          <div class="glow-bg"></div>
+
+          <svg class="route-svg" viewBox="0 0 1600 900" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <filter id="route-glow"><feGaussianBlur stdDeviation="6"/></filter>
+            </defs>
+            <path class="route-glow" d="M 100 800 Q 400 600, 700 650 T 1300 200" filter="url(#route-glow)"/>
+            <path class="route-line" d="M 100 800 Q 400 600, 700 650 T 1300 200"/>
+          </svg>
+
+          <div class="pin pin-start"></div>
+          <div class="pin pin-end"></div>
+
+          <div class="title-block">
+            <div class="eyebrow">Baron Shimanovsky &nbsp;·&nbsp; STEAM Scholars 2026</div>
+            <h1 class="title gradient-text">AbiliMap</h1>
+          </div>
+        </div>
+      </section>
+      <section id="slide-2" data-slide="origin">
+        <div class="slide-canvas">
+          <span class="slide-label">origin</span>
+          <div class="glow-bg"></div>
+
+          <div class="video-pair">
+            <video autoplay muted loop playsinline preload="auto">
+              <source src="assets/apple-liv.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline preload="auto">
+              <source src="assets/apple-screen.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </section>
+      <section id="slide-3" data-slide="first-idea">
+        <div class="slide-canvas">
+          <span class="slide-label">first idea</span>
+          <div class="topo-bg"></div>
+
+          <!-- Phone showing the actual Report Issue screen -->
+          <div class="s3-phone" aria-hidden="true">
+            <img src="assets/report-screen.png" alt="">
+          </div>
+
+          <!-- Arrow connecting phone → map -->
+          <svg class="s3-arrow" viewBox="0 0 200 60" preserveAspectRatio="none" aria-hidden="true">
+            <defs><filter id="s3-arrow-glow"><feGaussianBlur stdDeviation="2"/></filter></defs>
+            <path d="M 0 30 Q 100 30, 180 30" stroke="#2DC6DF" stroke-width="6" fill="none" opacity="0.4" filter="url(#s3-arrow-glow)"/>
+            <path d="M 0 30 Q 100 30, 180 30" stroke="#2DC6DF" stroke-width="2" fill="none" opacity="0.8"/>
+            <path d="M 175 22 L 195 30 L 175 38" stroke="#2DC6DF" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </svg>
+
+          <!-- Map area with labeled red report pins -->
+          <div class="s3-map">
+            <svg class="s3-map-svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="800" height="600" fill="#0a1825"/>
+              <g stroke="rgba(255,255,255,0.06)" stroke-width="6" fill="none">
+                <path d="M 0 150 L 800 150"/>
+                <path d="M 0 300 L 800 300"/>
+                <path d="M 0 450 L 800 450"/>
+                <path d="M 200 0 L 200 600"/>
+                <path d="M 450 0 L 450 600"/>
+                <path d="M 650 0 L 650 600"/>
+              </g>
+            </svg>
+
+            <div class="s3-marker" style="left: 22%; top: 26%;">
+              <span class="s3-pin"></span>
+              <span class="s3-label">no curb cut</span>
+            </div>
+            <div class="s3-marker" style="left: 64%; top: 22%;">
+              <span class="s3-pin"></span>
+              <span class="s3-label">stairs</span>
+            </div>
+            <div class="s3-marker" style="left: 84%; top: 50%;">
+              <span class="s3-pin"></span>
+              <span class="s3-label">steep slope</span>
+            </div>
+            <div class="s3-marker" style="left: 38%; top: 60%;">
+              <span class="s3-pin"></span>
+              <span class="s3-label">construction</span>
+            </div>
+            <div class="s3-marker" style="left: 16%; top: 78%;">
+              <span class="s3-pin"></span>
+              <span class="s3-label">narrow path</span>
+            </div>
+            <div class="s3-marker" style="left: 70%; top: 80%;">
+              <span class="s3-pin"></span>
+              <span class="s3-label">obstruction</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="slide-4" data-slide="the-wall">
+        <div class="slide-canvas">
+          <span class="slide-label">the wall</span>
+          <div class="topo-bg"></div>
+          <div class="empty-pulse"></div>
+
+          <div class="wall-phone" aria-hidden="true">
+            <img src="assets/admin-empty.png" alt="">
+          </div>
+        </div>
+      </section>
+      <section id="slide-5" data-slide="plan-b">
+        <div class="slide-canvas">
+          <span class="slide-label">plan b</span>
+
+          <!-- Phone showing the obstacle batch fed to OpenRouteService.
+               Mirrors slide 3's "phone (input form) → arrow → map (tags)":
+               here it's "phone (obstacle batch sent to ORS) → arrow → map (route)". -->
+          <div class="s5-phone" aria-hidden="true">
+            <div class="s5-phone-screen">
+              <div class="s5-sheet-bar">
+                <span class="s5-sheet-bar-dot"></span>
+                <span class="s5-sheet-bar-title">openrouteservice</span>
+              </div>
+              <div class="s5-sheet-meta">
+                <div>POST /v2/directions/foot-walking</div>
+                <div class="s5-sheet-status">
+                  <span class="s5-status-dot"></span>avoid_polygons · 8
+                </div>
+              </div>
+              <table class="s5-sheet">
+                <thead>
+                  <tr><th>lat</th><th>lng</th><th>type</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>34.0521</td><td>-118.2437</td><td>stairs</td></tr>
+                  <tr><td>34.0524</td><td>-118.2440</td><td>curb</td></tr>
+                  <tr><td>34.0526</td><td>-118.2443</td><td>slope</td></tr>
+                  <tr><td>34.0528</td><td>-118.2446</td><td>constr.</td></tr>
+                  <tr><td>34.0531</td><td>-118.2451</td><td>narrow</td></tr>
+                  <tr><td>34.0533</td><td>-118.2454</td><td>obstr.</td></tr>
+                  <tr><td>34.0535</td><td>-118.2457</td><td>stairs</td></tr>
+                  <tr><td>34.0537</td><td>-118.2461</td><td>curb</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Arrow connecting phone → map (matches slide 3) -->
+          <svg class="s5-arrow" viewBox="0 0 200 60" preserveAspectRatio="none" aria-hidden="true">
+            <defs><filter id="s5-arrow-glow"><feGaussianBlur stdDeviation="2"/></filter></defs>
+            <path d="M 0 30 Q 100 30, 180 30" stroke="#2DC6DF" stroke-width="6" fill="none" opacity="0.4" filter="url(#s5-arrow-glow)"/>
+            <path d="M 0 30 Q 100 30, 180 30" stroke="#2DC6DF" stroke-width="2" fill="none" opacity="0.8"/>
+            <path d="M 175 22 L 195 30 L 175 38" stroke="#2DC6DF" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </svg>
+
+          <!-- Map card: subtle streets + curving route weaving past labeled obstacles (frame matches slide 3) -->
+          <div class="s5-map-card">
+            <svg class="s5-map" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs><filter id="s5-glow"><feGaussianBlur stdDeviation="3"/></filter></defs>
+              <rect width="800" height="600" fill="#0a1825"/>
+
+              <!-- Faint streets for context only -->
+              <g stroke="rgba(255,255,255,0.06)" stroke-width="6" fill="none">
+                <path d="M 0 187 L 800 187"/>
+                <path d="M 0 400 L 800 400"/>
+                <path d="M 190 0 L 190 600"/>
+                <path d="M 410 0 L 410 600"/>
+                <path d="M 620 0 L 620 600"/>
+              </g>
+
+              <!-- Park-ish block far from the route for visual interest -->
+              <rect x="450" y="427" width="140" height="113" fill="#0d1f2c" opacity="0.5" rx="4"/>
+
+              <!-- Curving route (Bezier) clearly weaving between obstacles -->
+              <path d="M 100 513 C 140 467, 140 413, 190 400 C 240 387, 300 387, 330 320 C 360 253, 360 213, 410 187 C 460 160, 540 153, 620 133 L 700 87"
+                    stroke="#2DC6DF" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                    filter="url(#s5-glow)" opacity="0.55"/>
+              <path d="M 100 513 C 140 467, 140 413, 190 400 C 240 387, 300 387, 330 320 C 360 253, 360 213, 410 187 C 460 160, 540 153, 620 133 L 700 87"
+                    stroke="#2DC6DF" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+            <!-- Start / end pins on the route (percentage of map card) -->
+            <div class="s5-route-pin s5-route-start"></div>
+            <div class="s5-route-pin s5-route-end"></div>
+
+            <!-- Labeled obstacle pins — placed clearly OFF the route so it visibly detours around them -->
+            <div class="s5-marker" style="left: 30%; top: 80%;">
+              <span class="s5-pin"></span>
+              <span class="s5-label">construction</span>
+            </div>
+            <div class="s5-marker" style="left: 34%; top: 42%;">
+              <span class="s5-pin"></span>
+              <span class="s5-label">no curb cut</span>
+            </div>
+            <div class="s5-marker" style="left: 58%; top: 53%;">
+              <span class="s5-pin"></span>
+              <span class="s5-label">stairs</span>
+            </div>
+            <div class="s5-marker" style="left: 82%; top: 40%;">
+              <span class="s5-pin"></span>
+              <span class="s5-label">steep slope</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="slide-6" data-slide="demo">
+        <div class="slide-canvas">
+          <span class="slide-label">demo</span>
+          <div class="glow-bg"></div>
+
+          <div class="video-pair">
+            <video autoplay muted loop playsinline preload="auto">
+              <source src="assets/abili-liv.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline preload="auto">
+              <source src="assets/abili-screen.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </section>
+      <section id="slide-7" data-slide="whats-next">
+        <div class="slide-canvas">
+          <span class="slide-label">next</span>
+          <div class="glow-bg"></div>
+
+          <div class="cols">
+            <div class="col">
+              <div class="col-label">SOON</div>
+              <p class="col-line">Beta launch with the disability community.</p>
+            </div>
+            <div class="col">
+              <div class="col-label">THIS YEAR</div>
+              <p class="col-line">Indoor mapping (museums, malls).</p>
+            </div>
+            <div class="col">
+              <div class="col-label">SOMEDAY</div>
+              <p class="col-line callback">A world Liv can navigate without thinking about it.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="slide-8" data-slide="close">
+        <div class="slide-canvas">
+          <div class="glow-bg"></div>
+
+          <svg class="close-arc" viewBox="0 0 1600 900" preserveAspectRatio="none" aria-hidden="true">
+            <defs><filter id="close-glow"><feGaussianBlur stdDeviation="6"/></filter></defs>
+            <path d="M 200 700 Q 600 500, 900 550 T 1500 250" stroke="#2DC6DF" stroke-width="10" fill="none" filter="url(#close-glow)" opacity="0.35"/>
+            <path d="M 200 700 Q 600 500, 900 550 T 1500 250" stroke="#2DC6DF" stroke-width="2" fill="none" opacity="0.7"/>
+          </svg>
+
+          <h2 class="thanks gradient-text">Thank you</h2>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="lib/reveal/reveal.js"></script>
+  <script src="js/video-sync.js"></script>
+  <script>
+    Reveal.initialize({
+      width: 1600,
+      height: 900,
+      margin: 0,
+      center: false,
+      controls: false,
+      progress: false,
+      slideNumber: false,
+      transition: 'fade',
+      hash: true,
+    });
+  </script>
+</body>
+</html>

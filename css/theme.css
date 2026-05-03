@@ -1,0 +1,159 @@
+/* presentation/css/theme.css — shared Glow base + utilities */
+
+:root {
+  --bg: #07111A;
+  --bg-elevated: #0a1622;
+  --primary: #2DC6DF;
+  --primary-dark: #0C7B93;
+  --text: #E2F0F5;
+  --muted: #9DB4C0;
+  --coral: #ff7a7a;
+}
+
+/* Reveal overrides */
+.reveal {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --r-main-color: var(--text);
+  --r-heading-color: var(--text);
+  --r-background-color: var(--bg);
+}
+.reveal .slides { text-align: left; }
+.reveal .slides section,
+.reveal .slides section.present {
+  padding: 0;
+  width: 1600px;
+  height: 900px;
+  top: 0 !important;
+}
+
+/* Slide-level base canvas */
+.slide-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Glow background — used on most slides */
+.glow-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 75% 25%, rgba(45, 198, 223, 0.28), transparent 50%),
+    radial-gradient(circle at 15% 85%, rgba(12, 123, 147, 0.32), transparent 55%);
+  pointer-events: none;
+}
+
+/* Cartographic topographic background — used on story slides */
+.topo-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(0deg, transparent 49%, rgba(255, 255, 255, 0.025) 50%, transparent 51%),
+    linear-gradient(90deg, transparent 49%, rgba(255, 255, 255, 0.025) 50%, transparent 51%);
+  background-size: 36px 36px, 36px 36px;
+  pointer-events: none;
+}
+
+/* Glowing pin */
+.pin {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 0 6px rgba(45, 198, 223, 0.22), 0 0 22px var(--primary);
+}
+
+/* Coral pin (obstacle marker) */
+.pin-coral {
+  background: var(--coral);
+  box-shadow: 0 0 0 6px rgba(255, 122, 122, 0.22), 0 0 22px var(--coral);
+}
+
+/* Mono eyebrow text */
+.eyebrow {
+  font-family: "IBM Plex Mono", "SF Mono", Menlo, monospace;
+  font-size: 16px;
+  letter-spacing: 0.18em;
+  color: var(--primary);
+  opacity: 0.85;
+}
+
+/* Corner slide label */
+.slide-label {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  font-family: "IBM Plex Mono", "SF Mono", Menlo, monospace;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--primary);
+  opacity: 0.55;
+  z-index: 5;
+}
+
+/* Headline gradient (white → teal) */
+.gradient-text {
+  background: linear-gradient(135deg, #fff, var(--primary) 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Side-by-side video pair (slides 2 + 6).
+   Each video is sized to a 9:16 portrait box at full slide height; object-fit:
+   cover plus the matching aspect-ratio means iPhone videos (stored as 1920×1080
+   with rotation metadata) fill the box edge-to-edge with no internal letterbox. */
+.video-pair {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  z-index: 1;
+}
+.video-pair video {
+  height: 100%;
+  width: auto;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  background: #000;
+  display: block;
+}
+
+/* Live red chip */
+.live-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 99px;
+  background: rgba(255, 80, 80, 0.12);
+  border: 1px solid rgba(255, 100, 100, 0.25);
+  color: #ff7a7a;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+.live-chip::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ff5050;
+  box-shadow: 0 0 8px #ff5050;
+  animation: live-pulse 1.4s infinite;
+}
+@keyframes live-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
