@@ -1,0 +1,98 @@
+/* slide "process" — three-step workflow: plan → execute → review. */
+
+#slide-process .slide-canvas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#slide-process .proc-block {
+  position: relative;
+  width: min(1300px, 88%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
+}
+
+#slide-process .proc-headline {
+  font-size: 96px;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin: 0;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+#slide-process.present .proc-headline { opacity: 1; transform: translateY(0); }
+
+/* Three-step horizontal flow */
+#slide-process .proc-steps {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 28px;
+  width: 100%;
+}
+
+#slide-process .proc-step {
+  flex: 1;
+  max-width: 320px;
+  padding: 40px 28px 34px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(45, 198, 223, 0.22);
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+#slide-process.present .proc-step { opacity: 1; transform: translateY(0); }
+#slide-process.present .proc-step:nth-child(1) { transition-delay: 0.30s; }
+#slide-process.present .proc-step:nth-child(3) { transition-delay: 0.55s; }
+#slide-process.present .proc-step:nth-child(5) { transition-delay: 0.80s; }
+
+#slide-process .proc-step-glyph {
+  width: 80px;
+  height: 80px;
+  color: var(--primary);
+  filter: drop-shadow(0 0 16px rgba(45, 198, 223, 0.40));
+}
+
+#slide-process .proc-step-num {
+  font-family: "IBM Plex Mono", "SF Mono", Menlo, monospace;
+  font-size: 13px;
+  letter-spacing: 0.32em;
+  color: var(--primary);
+  opacity: 0.85;
+}
+
+#slide-process .proc-step-name {
+  font-size: 44px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  line-height: 1;
+  text-align: center;
+}
+
+/* Connector arrows between steps */
+#slide-process .proc-arrow {
+  flex-shrink: 0;
+  width: 56px;
+  height: 24px;
+  align-self: center;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+#slide-process.present .proc-arrow:nth-child(2) { opacity: 1; transform: translateX(0); transition-delay: 0.45s; }
+#slide-process.present .proc-arrow:nth-child(4) { opacity: 1; transform: translateX(0); transition-delay: 0.70s; }
